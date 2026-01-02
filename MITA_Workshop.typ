@@ -58,9 +58,9 @@ Both frontend and backend contain only a basic login stub. You will implement th
 #raw(block: true, lang: none, "
 ┌─────────────────────────────────────────────────────────────┐
 │                      React Frontend                         │
-│                    localhost:5173                           │
+│                      localhost:5173                         │
 │                                                             │
-│          /java/*    |    /dotnet/*    |    /php/*          │
+│          /java/*    |    /dotnet/*    |    /php/*           │
 └────────────────────────────┬────────────────────────────────┘
                              │
                              │  REST API (OpenAPI spec)
