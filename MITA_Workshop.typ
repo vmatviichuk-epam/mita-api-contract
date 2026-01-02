@@ -23,7 +23,11 @@
   
   #box(stroke: 1pt + luma(200), inset: 1.2em, radius: 4pt)[
     #text(size: 11pt)[
+      *Frontend:* React
+      
       *Choose ONE backend:* Java | .NET | PHP
+
+      *Database*: MySQL
     ]
   ]
 ]
@@ -106,7 +110,7 @@ Both frontend and backend contain only a basic login stub. You will implement th
   ```
   1. Clone the frontend repository
   2. Clone ONE backend repository of your choice
-  3. Ensure MySQL is running on localhost:3306
+  3. Ensure MySQL is running
   4. Start the frontend:  npm install && npm run dev
   5. Start your backend (see backend repo README)
   6. Open browser: http://localhost:5173/java/login
