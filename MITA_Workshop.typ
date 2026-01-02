@@ -109,7 +109,8 @@ Both frontend and backend contain only a basic login stub. You will implement th
   
   ```
   1. Clone the frontend repository
-  2. Clone ONE backend repository of your choice
+  2. Clone ONE backend repository (use --recursive for submodule)
+     git clone --recursive <backend-repo-url>
   3. Ensure MySQL is running
   4. Start the frontend:  npm install && npm run dev
   5. Start your backend (see backend repo README)
@@ -117,6 +118,10 @@ Both frontend and backend contain only a basic login stub. You will implement th
                    http://localhost:5173/dotnet/login
                    http://localhost:5173/php/login
   ```
+  
+  #text(size: 9pt, fill: gray)[
+    _Note: Backend repos include the API contract as a git submodule in `api-contract/` folder._
+  ]
 ]
 
 #v(0.5cm)
