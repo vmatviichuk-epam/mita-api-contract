@@ -36,15 +36,17 @@
 In this workshop, you will build *MITA* — a Mini Issue Tracker Application.
 
 The project consists of *multiple repositories*:
-- One shared *React frontend*
-- Three *backend implementations* (Java, .NET, PHP)
+- One *React frontend* (skeleton with login stub)
+- Three *backend skeletons* (Java, .NET, PHP)
 - One shared *API contract* (OpenAPI specification)
 
-*Your task:* Choose *ONE* backend repository and implement all features according to the requirements. The frontend and API contract are already provided — you only implement the backend.
+*Your task:* 
+- Clone the *frontend* repository and implement all UI features
+- Choose *ONE backend* repository and implement all API endpoints
 
-All three backends must produce identical API behavior. The frontend switches between backends via URL routes (`/java/*`, `/dotnet/*`, `/php/*`).
+Both frontend and backend contain only a basic login stub. You will implement the full functionality according to the requirements below.
 
-#v(1cm)
+#v(0.5cm)
 
 = Architecture
 
@@ -80,7 +82,49 @@ All three backends must produce identical API behavior. The frontend switches be
 
 #pagebreak()
 
-// Requirements
+= Repositories
+
+#table(
+  columns: (auto, 1fr),
+  align: (left, left),
+  stroke: none,
+  row-gutter: 1em,
+  
+  [*API Contract*], [#link("https://github.com/vmatviichuk-epam/mita-api-contract")],
+  [*Frontend*], [#link("https://github.com/vmatviichuk-epam/mita-frontend")],
+  [], [],
+  [*Java Backend*], [#link("https://github.com/vmatviichuk-epam/mita-backend-java")],
+  [*.NET Backend*], [#link("https://github.com/vmatviichuk-epam/mita-backend-dotnet")],
+  [*PHP Backend*], [#link("https://github.com/vmatviichuk-epam/mita-backend-php")],
+)
+
+#v(1cm)
+
+#box(stroke: 1pt + luma(180), inset: 1.2em, radius: 4pt, width: 100%)[
+  *Getting Started*
+  
+  ```
+  1. Clone the frontend repository
+  2. Clone ONE backend repository of your choice
+  3. Ensure MySQL is running on localhost:3306
+  4. Start the frontend:  npm install && npm run dev
+  5. Start your backend (see backend repo README)
+  6. Open browser: http://localhost:5173/java/login
+                   http://localhost:5173/dotnet/login
+                   http://localhost:5173/php/login
+  ```
+]
+
+#v(0.5cm)
+
+#align(center)[
+  #text(size: 10pt, fill: gray)[
+    Full API specification available in `openapi.yaml`
+  ]
+]
+
+#pagebreak()
+
 = Requirements
 
 == Goal
@@ -164,62 +208,20 @@ If activity tracking is implemented:
 - Passwords must be stored in hashed form.
 - Foreign key constraints must enforce user-to-issue ownership.
 
-== 7. UI (Already Provided)
+== 7. UI
 
-The frontend is already implemented and contains:
+The UI must contain at minimum:
 - A login page
+- A registration page
 - A page listing user issues with filtering controls
 - A page for creating and editing issues
 
-All UI actions map directly to the defined backend operations.
+All UI actions must map directly to the defined backend operations.
 
-#v(0.5cm)
+#v(1cm)
 
 == Success Criteria
 
 - The application must implement exactly the features described above.
 - All core operations must require authentication.
 - User data and issue data must remain isolated at all times.
-
-#pagebreak()
-
-= Repositories
-
-#table(
-  columns: (auto, 1fr),
-  align: (left, left),
-  stroke: none,
-  row-gutter: 1em,
-  
-  [*API Contract*], [#link("https://github.com/vmatviichuk-epam/mita-api-contract")],
-  [*Frontend*], [#link("https://github.com/vmatviichuk-epam/mita-frontend")],
-  [], [],
-  [*Java Backend*], [#link("https://github.com/vmatviichuk-epam/mita-backend-java")],
-  [*.NET Backend*], [#link("https://github.com/vmatviichuk-epam/mita-backend-dotnet")],
-  [*PHP Backend*], [#link("https://github.com/vmatviichuk-epam/mita-backend-php")],
-)
-
-#v(1.5cm)
-
-#box(stroke: 1pt + luma(180), inset: 1.2em, radius: 4pt, width: 100%)[
-  *Getting Started*
-  
-  ```
-  1. Clone the frontend repository
-  2. Clone ONE backend repository of your choice
-  3. Ensure MySQL is running on localhost:3306
-  4. Start the frontend:  npm install && npm run dev
-  5. Start your backend (see backend repo README)
-  6. Open browser: http://localhost:5173/java/login
-                   http://localhost:5173/dotnet/login
-                   http://localhost:5173/php/login
-  ```
-]
-
-#v(1cm)
-
-#align(center)[
-  #text(size: 10pt, fill: gray)[
-    Full API specification available in `openapi.yaml`
-  ]
-]
