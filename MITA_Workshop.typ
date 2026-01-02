@@ -108,19 +108,27 @@ Both frontend and backend contain only a basic login stub. You will implement th
   *Getting Started*
   
   ```
-  1. Clone the frontend repository
-  2. Clone ONE backend repository (use --recursive for submodule)
-     git clone --recursive <backend-repo-url>
+  1. Clone the frontend repository:
+     git clone --recursive https://github.com/vmatviichuk-epam/mita-frontend.git
+
+  2. Clone ONE backend repository of your choice:
+     2.1 Java:  git clone --recursive https://github.com/vmatviichuk-epam/mita-backend-java.git
+     2.2 .NET:  git clone --recursive https://github.com/vmatviichuk-epam/mita-backend-dotnet.git
+     2.3 PHP:   git clone --recursive https://github.com/vmatviichuk-epam/mita-backend-php.git
+
   3. Ensure MySQL is running
+
   4. Start the frontend:  npm install && npm run dev
+
   5. Start your backend (see backend repo README)
-  6. Open browser: http://localhost:5173/java/login
-                   http://localhost:5173/dotnet/login
-                   http://localhost:5173/php/login
+
+  6. Open browser: http://localhost:5173/java/login   (for Java)
+                   http://localhost:5173/dotnet/login (for .NET)
+                   http://localhost:5173/php/login    (for PHP)
   ```
-  
+
   #text(size: 9pt, fill: gray)[
-    _Note: Backend repos include the API contract as a git submodule in `api-contract/` folder._
+    _Note: All repos include the API contract as a git submodule in `api-contract/` folder._
   ]
 ]
 
