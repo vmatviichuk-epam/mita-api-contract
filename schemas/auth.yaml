@@ -1,0 +1,61 @@
+# Authentication Schemas
+# These schemas are also defined in openapi.yaml but extracted here for reference
+
+LoginRequest:
+  type: object
+  required:
+    - username
+    - password
+  properties:
+    username:
+      type: string
+      minLength: 1
+      description: User's username
+    password:
+      type: string
+      minLength: 1
+      description: User's password
+
+LoginResponse:
+  type: object
+  required:
+    - token
+    - user
+  properties:
+    token:
+      type: string
+      description: JWT authentication token
+    user:
+      $ref: '#/User'
+
+User:
+  type: object
+  required:
+    - id
+    - username
+  properties:
+    id:
+      type: integer
+      format: int64
+      description: User's unique identifier
+    username:
+      type: string
+      description: User's username
+
+ErrorResponse:
+  type: object
+  required:
+    - error
+  properties:
+    error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Human-readable error message
